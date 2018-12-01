@@ -1,43 +1,45 @@
-Mycroft [![Build Status](https://travis-ci.org/MycroftAI/mycroft-core.svg?branch=master)](https://travis-ci.org/MycroftAI/mycroft-core) [![Coverage Status](https://coveralls.io/repos/github/MycroftAI/mycroft-core/badge.svg?branch=dev)](https://coveralls.io/github/MycroftAI/mycroft-core?branch=dev)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+Mycroft [！[建立状态]（https://travis-ci.org/MycroftAI/mycroft-core.svg?branch=master）]（https://travis-ci.org/MycroftAI/mycroft-core）[！ [覆盖状态]（https://coveralls.io/repos/github/MycroftAI/mycroft-core/badge.svg?branch=dev）]（https://coveralls.io/github/MycroftAI/mycroft-core?branch= DEV）
+[！[PRs Welcome]（https://img.shields.io/badge/PRs-welcome-brightgreen.svg）]（http://makeapullrequest.com）
 ==========
 
-Mycroft is a hackable open source voice assistant.
 
-# Table of Contents
+麦考夫是一个可魔改的开源语音助手
 
-- [Table of Contents](#table-of-contents)
-- [Getting Started](#getting-started)
-- [Running Mycroft](#running-mycroft)
-- [Using Mycroft](#using-mycroft)
-  * [*Home* Device and Account Manager](#home-device-and-account-manager)
-  * [Skills](#skills)
-- [Behind the scenes](#behind-the-scenes)
-  * [Pairing Information](#pairing-information)
-  * [Configuration](#configuration)
-  * [Using Mycroft Without Home](#using-mycroft-without-home)
-  * [API Key Services](#api-key-services)
-  * [Using Mycroft behind a proxy](#using-mycroft-behind-a-proxy)
-    + [Using Mycroft behind a proxy without authentication](#using-mycroft-behind-a-proxy-without-authentication)
-    + [Using Mycroft behind an authenticated proxy](#using-mycroft-behind-an-authenticated-proxy)
-- [Getting Involved](#getting-involved)
-- [Links](#links)
+＃ 目录
 
-# Getting Started
+ -  [目录]（＃table-of-contents）
+ -  [入门]（＃getting-started）
+ -  [运行Mycroft]（＃running-mycroft）
+ -  [使用Mycroft]（＃using-mycroft）
+   * [*主页*设备和客户经理]（＃home-device-and-account-manager）
+   * [技能]（＃技能）
+ -  [幕后]（＃幕后）
+   * [配对信息]（＃配对信息）
+   * [配置]（＃配置）
+   * [在没有家的情况下使用Mycroft]（＃using-mycroft-without-home）
+   * [API密钥服务]（＃api-key-services）
+   * [在代理服务器后面使用Mycroft]（＃using-mycroft-behind-a-proxy）
+     + [在没有身份验证的情况下在代理后面使用Mycroft]（＃using-mycroft-behind-a-proxy-without-authentication）
+     + [在经过身份验证的代理后面使用Mycroft]（＃using-mycroft-behind-an-authenticated-proxy）
+ -  [参与进来]（＃getting-involving）
+ -  [链接]（＃links）
 
-First, get the code on your system!  The simplest method is via git ([git installation instructions](https://gist.github.com/derhuerst/1b15ff4652a867391f03)):
+＃ 入门
+
+首先，获取您系统上的代码！ 最简单的方法是通过git（[git安装说明]
+(https://gist.github.com/derhuerst/1b15ff4652a867391f03)):
 - `cd ~/`
 - `git clone --depth=1 https://github.com/MycroftAI/mycroft-core.git`
 - `cd mycroft-core`
 - `bash dev_setup.sh`
 
 
-This script sets up dependencies and a [virtualenv][about-virtualenv].  If running in an environment besides Ubuntu/Debian, Arch or Fedora you may need to manually install packages as instructed by dev_setup.sh.
+此脚本设置依赖项和[virtualenv] [about-virtualenv]。 如果在Ubuntu / Debian，Arch或Fedora之外的环境中运行，您可能需要按照说明手动安装软件包dev_setup.sh.
 
 [about-virtualenv]:https://virtualenv.pypa.io/en/stable/
 
-NOTE: The default branch for this repository is 'dev', which should be considered a work-in-progress. If you want to clone a more stable version, switch over to the 'master' branch.
-NOTE: If you are willing to contribute to this project, clone the entire repository by 
+注意：此存储库的默认分支是“dev”，应将其视为正在进行的工作。 如果要克隆更稳定的版本，请切换到“master”分支。
+注意：如果您愿意为此项目做出贡献，请通过以下方式克隆整个存储库
 - `git clone  https://github.com/MycroftAI/mycroft-core.git`
  instead of 
 - `git clone --depth=1 https://github.com/MycroftAI/mycroft-core.git`
@@ -45,11 +47,11 @@ which is said above.
 
 # Running Mycroft
 
-Mycroft provides `start-mycroft.sh` to perform common tasks. This script uses a virtualenv created by `dev_setup.sh`.  Assuming you installed mycroft-core in your home directory run:
+Mycroft提供`start-mycroft.sh`来执行常见任务。 该脚本使用由`dev_setup.sh`创建的virtualenv。 假设您在主目录中安装mycroft-core运行：
 - `cd ~/mycroft-core`
 - `./start-mycroft.sh debug`
 
-The "debug" command will start the background services (microphone listener, skill, messagebus, and audio subsystems) as well as bringing up a text-based Command Line Interface (CLI) you can use to interact with Mycroft and see the contents of the various logs. Alternatively you can run `./start-mycroft.sh all` to begin the services without the command line interface.  Later you can bring up the CLI using `./start-mycroft.sh cli`.
+“debug”命令将启动后台服务（麦克风监听器，技能，消息总线和音频子系统）以及启动基于文本的命令行界面（CLI），您可以使用它与Mycroft进行交互并查看内容。 各种日志。 或者，您可以运行`./start-mycroft.sh all`以在没有命令行界面的情况下开始服务。 稍后您可以使用CLI启动CLI `./start-mycroft.sh cli`.
 
 The background services can be stopped as a group with:
 - `./stop-mycroft.sh`
@@ -57,90 +59,90 @@ The background services can be stopped as a group with:
 # Using Mycroft
 
 ## *Home* Device and Account Manager
-Mycroft AI, Inc. maintains a device and account management system known as Mycroft Home. Developers may sign up at: https://home.mycroft.ai
+Mycroft AI，Inc。维护着一个名为Mycroft Home的设备和帐户管理系统。 开发人员可以注册: https://home.mycroft.ai
 
-By default, mycroft-core  is configured to use Home. By saying "Hey Mycroft, pair my device" (or any other request verbal request) you will be informed that your device needs to be paired. Mycroft will speak a 6-digit code which you can entered into the pairing page within the [Mycroft Home site](https://home.mycroft.ai).
+默认情况下，mycroft-core配置为使用Home。 通过说“嘿Mycroft，配对我的设备”（或任何其他请求口头请求），您将被告知您的设备需要配对。 Mycroft会说一个6位数的代码，您可以在[Mycroft Home网站]（https://home.mycroft.ai）中输入配对页面。
 
-Once paired, your unit will use Mycroft API keys for services such as Speech-to-Text (STT), weather and various other skills.
+配对后，您的设备将使用Mycroft API密钥进行语音到文本（STT），天气和各种其他技能等服务。
 
 ## Skills
 
-Mycroft is nothing without skills.  There are a handful of default skills that are downloaded automatically to your `/opt/mycroft/skills` directory, but most need to be installed explicitly.  See the [Skill Repo](https://github.com/MycroftAI/mycroft-skills#welcome) to discover skills made by others.  And please share your own interesting work!
+如果没有技能，Mycroft就没有了。 有一些默认技能会自动下载到您的`/ opt / mycroft / skills`目录，但大多数需要明确安装。 请参阅[Skill Repo]（https://github.com/MycroftAI/mycroft-skills#welcome）以发现他人的技能。 请分享你自己有趣的工作！
 
-# Behind the scenes
+＃幕后
 
-## Pairing Information
-Pairing information generated by registering with Home is stored in:
-`~/.mycroft/identity/identity2.json` <b><-- DO NOT SHARE THIS WITH OTHERS!</b>
+##配对信息
+通过注册Home生成的配对信息存储在：
+`〜/ .mycroft / identity / identity2.json` <b> < - 请勿与其他人分享！</ b>
 
-## Configuration
-Mycroft configuration consists of 4 possible locations:
-- `mycroft-core/mycroft/configuration/mycroft.conf`(Defaults)
-- [Mycroft Home](https://home.mycroft.ai) (Remote)
-- `/etc/mycroft/mycroft.conf`(Machine)
-- `$HOME/.mycroft/mycroft.conf`(User)
+##配置
+Mycroft配置包含4个可能的位置：
+ - `mycroft-core / mycroft / configuration / mycroft.conf`（默认值）
+ -  [Mycroft Home]（https://home.mycroft.ai）（远程）
+ - `/etc/mycroft/mycroft.conf`(Machine）
+ - `$ HOME / .mycroft / mycroft.conf`（用户）
 
-When the configuration loader starts, it looks in these locations in this order, and loads ALL configurations. Keys that exist in multiple configuration files will be overridden by the last file to contain the value. This process results in a minimal amount being written for a specific device and user, without modifying default distribution files.
+配置加载程序启动时，它会按此顺序查看这些位置，并加载所有配置。最后一个文件将覆盖多个配置文件中存在的键以包含该值。此过程导致为特定设备和用户编写的最小量，而无需修改默认分发文件。
 
-## Using Mycroft Without Home
+##在没有家的情况下使用Mycroft
 
-If you do not wish to use the Mycroft Home service, you may insert your own API keys into the configuration files listed below in <b>configuration</b>.
+如果您不想使用Mycroft Home服务，可以将自己的API密钥插入下面<b>配置</ b>中列出的配置文件中。
 
-The place to insert the API key looks like the following:
+插入API密钥的位置如下所示：
 
 `[WeatherSkill]`
-`api_key = ""`
+`api_key =“”`
 
-Put a relevant key inside the quotes and mycroft-core should begin to use the key immediately.
+将相关密钥放在引号内，mycroft-core应立即开始使用密钥。
 
-## API Key Services
+## API密钥服务
 
-These are the keys currently used in Mycroft Core:
+这些是Mycroft Core中当前使用的密钥：
 
-- [STT API, Google STT, Google Cloud Speech](http://www.chromium.org/developers/how-tos/api-keys)
-- [Weather Skill API, OpenWeatherMap](http://openweathermap.org/api)
-- [Wolfram-Alpha Skill](http://products.wolframalpha.com/api/)
+ -  [STT API，Google STT，Google Cloud Speech]（http://www.chromium.org/developers/how-tos/api-keys）
+ -  [天气技能API，OpenWeatherMap]（http://openweathermap.org/api）
+ -  [Wolfram-Alpha Skill]（http://products.wolframalpha.com/api/）
 
-## Using Mycroft behind a proxy
+##在代理后面使用Mycroft
 
-Many schools, universities and workplaces run a `proxy` on their network. If you need to type in a username and password to access the external internet, then you are likely behind a `proxy`.
+许多学校，大学和工作场所在他们的网络上运行“代理”。如果您需要输入用户名和密码来访问外部互联网，那么您很可能在“代理”之后。
 
-If you plan to use Mycroft behind a proxy, then you will need to do an additional configuration step.
+如果您计划在代理后面使用Mycroft，则需要执行其他配置步骤。
 
-_NOTE: In order to complete this step, you will need to know the `hostname` and `port` for the proxy server. Your network administrator will be able to provide these details. Your network administrator may want information on what type of traffic Mycroft will be using. We use `https` traffic on port `443`, primarily for accessing ReST-based APIs._
+_注意：要完成此步骤，您需要知道代理服务器的`hostname`和`port`。您的网络管理员将能够提供这些详细信息。您的网络管理员可能需要有关Mycroft将使用何种类型的流量的信息。我们在端口`443`上使用`https`流量，主要用于访问基于ReST的API。
 
-### Using Mycroft behind a proxy without authentication
+###在没有身份验证的情况下在代理后面使用Mycroft
 
-If you are using Mycroft behind a proxy without authentication, add the following environment variables, changing the `proxy_hostname.com` and `proxy_port` for the values for your network. These commands are executed from the Linux command line interface (CLI).
+如果您在没有身份验证的情况下在代理后面使用Mycroft，请添加以下环境变量，更改`proxy_hostname.com`和`proxy_port`以获取网络的值。这些命令从Linux命令行界面（CLI）执行。
 
-```bash
-$ export http_proxy=http://proxy_hostname.com:proxy_port
-$ export https_port=http://proxy_hostname.com:proxy_port
-$ export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1"
+```庆典
+$ export http_proxy = http：//proxy_hostname.com：proxy_port
+$ export https_port = http：//proxy_hostname.com：proxy_port
+$ export no_proxy =“localhost，127.0.0.1，localaddress，.localdomain.com，0.0.0.0，:: 1”
 ```
 
-### Using Mycroft behind an authenticated proxy
+###在经过身份验证的代理后面使用Mycroft
 
-If  you are behind a proxy which requires authentication, add the following environment variables, changing the `proxy_hostname.com` and `proxy_port` for the values for your network. These commands are executed from the Linux command line interface (CLI).
+如果您位于需要身份验证的代理后面，请添加以下环境变量，更改网络值的`proxy_hostname.com`和`proxy_port`。这些命令从Linux命令行界面（CLI）执行。
 
-```bash
-$ export http_proxy=http://user:password@proxy_hostname.com:proxy_port
-$ export https_port=http://user:password@proxy_hostname.com:proxy_port
-$ export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com,0.0.0.0,::1"
+```庆典
+$ export http_proxy = http：// user：password@proxy_hostname.com：proxy_port
+$ export https_port = http：// user：password@proxy_hostname.com：proxy_port
+$ export no_proxy =“localhost，127.0.0.1，localaddress，.localdomain.com，0.0.0.0，:: 1”
 ```
 
-# Getting Involved
+＃ 参与进来
 
-This is an open source project and we would love your help. We have prepared a [contributing](.github/CONTRIBUTING.md) guide to help you get started.
+这是一个开源项目，我们很乐意为您提供帮助。我们准备了[贡献]（。github / CONTRIBUTING.md）指南来帮助您入门。
 
-If this is your first PR or you're not sure where to get started,
-say hi in [Mycroft Chat](https://chat.mycroft.ai/) and a team member would be happy to mentor you.
-Join the [Mycroft Forum](https://community.mycroft.ai/) for questions and answers.
+如果这是您的第一个PR，或者您不确定从哪里开始，
+在[Mycroft Chat]（https://chat.mycroft.ai/）中打个招呼，一位团队成员很乐意为您提供指导。
+加入[Mycroft论坛]（https://community.mycroft.ai/）获取问题和答案。
 
-# Links
-* [Creating a Skill](https://docs.mycroft.ai/skill.creation)
-* [Documentation](https://docs.mycroft.ai)
-* [Release Notes](https://github.com/MycroftAI/mycroft-core/releases)
-* [Mycroft Chat](https://chat.mycroft.ai)
-* [Mycroft Forum](https://community.mycroft.ai)
-* [Mycroft Blog](https://mycroft.ai/blog)
+＃链接
+* [创造技能]（https://docs.mycroft.ai/skill.creation）
+* [文档]（https://docs.mycroft.ai）
+* [发行说明]（https://github.com/MycroftAI/mycroft-core/releases）
+* [Mycroft Chat]（https://chat.mycroft.ai）
+* [Mycroft论坛]（https://community.mycroft.ai）
+* [Mycroft Blog]（https://mycroft.ai/blog）
