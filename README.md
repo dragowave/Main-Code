@@ -1,11 +1,6 @@
-Mycroft [！[建立状态]（https://travis-ci.org/MycroftAI/mycroft-core.svg?branch=master）]（https://travis-ci.org/MycroftAI/mycroft-core）[！ [覆盖状态]（https://coveralls.io/repos/github/MycroftAI/mycroft-core/badge.svg?branch=dev）]（https://coveralls.io/github/MycroftAI/mycroft-core?branch= DEV）
-[！[PRs Welcome]（https://img.shields.io/badge/PRs-welcome-brightgreen.svg）]（http://makeapullrequest.com）
-==========
+Mycroft是一个可魔改的开源语音助手
 
-
-麦考夫是一个可魔改的开源语音助手
-
-＃ 目录
+# 目录
 
  -  [目录]（＃table-of-contents）
  -  [入门]（＃getting-started）
@@ -24,7 +19,7 @@ Mycroft [！[建立状态]（https://travis-ci.org/MycroftAI/mycroft-core.svg?br
  -  [参与进来]（＃getting-involving）
  -  [链接]（＃links）
 
-＃ 入门
+# 入门
 
 首先，获取您系统上的代码！ 最简单的方法是通过git（[git安装说明]
 (https://gist.github.com/derhuerst/1b15ff4652a867391f03)):
@@ -69,13 +64,13 @@ Mycroft AI，Inc。维护着一个名为Mycroft Home的设备和帐户管理系�
 
 如果没有技能，Mycroft就没有了。 有一些默认技能会自动下载到您的`/ opt / mycroft / skills`目录，但大多数需要明确安装。 请参阅[Skill Repo]（https://github.com/MycroftAI/mycroft-skills#welcome）以发现他人的技能。 请分享你自己有趣的工作！
 
-＃幕后
+# 幕后
 
-##配对信息
+## 配对信息
 通过注册Home生成的配对信息存储在：
 `〜/ .mycroft / identity / identity2.json` <b> < - 请勿与其他人分享！</ b>
 
-##配置
+## 配置
 Mycroft配置包含4个可能的位置：
  - `mycroft-core / mycroft / configuration / mycroft.conf`（默认值）
  -  [Mycroft Home]（https://home.mycroft.ai）（远程）
@@ -84,7 +79,7 @@ Mycroft配置包含4个可能的位置：
 
 配置加载程序启动时，它会按此顺序查看这些位置，并加载所有配置。最后一个文件将覆盖多个配置文件中存在的键以包含该值。此过程导致为特定设备和用户编写的最小量，而无需修改默认分发文件。
 
-##在没有家的情况下使用Mycroft
+## 在没有家的情况下使用Mycroft
 
 如果您不想使用Mycroft Home服务，可以将自己的API密钥插入下面<b>配置</ b>中列出的配置文件中。
 
@@ -103,7 +98,7 @@ Mycroft配置包含4个可能的位置：
  -  [天气技能API，OpenWeatherMap]（http://openweathermap.org/api）
  -  [Wolfram-Alpha Skill]（http://products.wolframalpha.com/api/）
 
-##在代理后面使用Mycroft
+## 在代理后面使用Mycroft
 
 许多学校，大学和工作场所在他们的网络上运行“代理”。如果您需要输入用户名和密码来访问外部互联网，那么您很可能在“代理”之后。
 
@@ -111,7 +106,7 @@ Mycroft配置包含4个可能的位置：
 
 _注意：要完成此步骤，您需要知道代理服务器的`hostname`和`port`。您的网络管理员将能够提供这些详细信息。您的网络管理员可能需要有关Mycroft将使用何种类型的流量的信息。我们在端口`443`上使用`https`流量，主要用于访问基于ReST的API。
 
-###在没有身份验证的情况下在代理后面使用Mycroft
+### 在没有身份验证的情况下在代理后面使用Mycroft
 
 如果您在没有身份验证的情况下在代理后面使用Mycroft，请添加以下环境变量，更改`proxy_hostname.com`和`proxy_port`以获取网络的值。这些命令从Linux命令行界面（CLI）执行。
 
@@ -121,17 +116,17 @@ $ export https_port = http：//proxy_hostname.com：proxy_port
 $ export no_proxy =“localhost，127.0.0.1，localaddress，.localdomain.com，0.0.0.0，:: 1”
 ```
 
-###在经过身份验证的代理后面使用Mycroft
+### 在经过身份验证的代理后面使用Mycroft
 
 如果您位于需要身份验证的代理后面，请添加以下环境变量，更改网络值的`proxy_hostname.com`和`proxy_port`。这些命令从Linux命令行界面（CLI）执行。
 
-```庆典
+``` 庆典
 $ export http_proxy = http：// user：password@proxy_hostname.com：proxy_port
 $ export https_port = http：// user：password@proxy_hostname.com：proxy_port
 $ export no_proxy =“localhost，127.0.0.1，localaddress，.localdomain.com，0.0.0.0，:: 1”
 ```
 
-＃ 参与进来
+# 参与进来
 
 这是一个开源项目，我们很乐意为您提供帮助。我们准备了[贡献]（。github / CONTRIBUTING.md）指南来帮助您入门。
 
@@ -139,10 +134,9 @@ $ export no_proxy =“localhost，127.0.0.1，localaddress，.localdomain.com，
 在[Mycroft Chat]（https://chat.mycroft.ai/）中打个招呼，一位团队成员很乐意为您提供指导。
 加入[Mycroft论坛]（https://community.mycroft.ai/）获取问题和答案。
 
-＃链接
-* [创造技能]（https://docs.mycroft.ai/skill.creation）
+# 链接
 * [文档]（https://docs.mycroft.ai）
 * [发行说明]（https://github.com/MycroftAI/mycroft-core/releases）
-* [Mycroft Chat]（https://chat.mycroft.ai）
-* [Mycroft论坛]（https://community.mycroft.ai）
-* [Mycroft Blog]（https://mycroft.ai/blog）
+* [聊天机器人]（https://chat.mycroft.ai）
+* [论坛]（https://community.mycroft.ai）
+* [博客]（https://mycroft.ai/blog）
