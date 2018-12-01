@@ -48,12 +48,12 @@ Mycroft提供`start-mycroft.sh`来执行常见任务。 该脚本使用由`dev_s
 
 “debug”命令将启动后台服务（麦克风监听器，技能，消息总线和音频子系统）以及启动基于文本的命令行界面（CLI），您可以使用它与Mycroft进行交互并查看内容。 各种日志。 或者，您可以运行`./start-mycroft.sh all`以在没有命令行界面的情况下开始服务。 稍后您可以使用CLI启动CLI `./start-mycroft.sh cli`.
 
-The background services can be stopped as a group with:
+后台服务可以作为一个组停止:
 - `./stop-mycroft.sh`
 
 # Using Mycroft
 
-## *Home* Device and Account Manager
+## *主页*设备和客户经理
 Mycroft AI，Inc。维护着一个名为Mycroft Home的设备和帐户管理系统。 开发人员可以注册: https://home.mycroft.ai
 
 默认情况下，mycroft-core配置为使用Home。 通过说“嘿Mycroft，配对我的设备”（或任何其他请求口头请求），您将被告知您的设备需要配对。 Mycroft会说一个6位数的代码，您可以在[Mycroft Home网站]（https://home.mycroft.ai）中输入配对页面。
@@ -79,7 +79,7 @@ Mycroft配置包含4个可能的位置：
 
 配置加载程序启动时，它会按此顺序查看这些位置，并加载所有配置。最后一个文件将覆盖多个配置文件中存在的键以包含该值。此过程导致为特定设备和用户编写的最小量，而无需修改默认分发文件。
 
-## 在没有家的情况下使用Mycroft
+## 在没有wifi的情况下使用Mycroft
 
 如果您不想使用Mycroft Home服务，可以将自己的API密钥插入下面<b>配置</ b>中列出的配置文件中。
 
