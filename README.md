@@ -2,22 +2,22 @@ Mycroft是一个可魔改的开源语音助手
 
 # 目录
 
- -  [目录](# table-of-contents)
- -  [入门](# getting-started)
- -  [运行Mycroft](# running-mycroft)
- -  [使用Mycroft](# using-mycroft)
-   * [*主页*设备和客户经理](# home-device-and-account-manager)
-   * [技能] (#技能)
- -  [幕后](#幕后)
-   * [配对信息](#配对信息)
-   * [配置](#配置)
-   * [在没有家的情况下使用Mycroft](# using-mycroft-without-home)
-   * [API密钥服务](# api-key-services)
-   * [在代理服务器后面使用Mycroft](# using-mycroft-behind-a-proxy)
-     +[在没有身份验证的情况下在代理后面使用Mycroft](# using-mycroft-behind-a-proxy-without-authentication)
-     + [在经过身份验证的代理后面使用Mycroft](# using-mycroft-behind-an-authenticated-proxy)
- -  [参与进来](# getting-involving)
- -  [链接](# links)
+-[目录] 
+-[入门] 
+-[运行Mycroft] 
+-[使用Mycroft] 
+   * [*主页*设备和客户经理] 
+   * [技能] 
+   -[幕后] 
+   * [配对信息] 
+   * [配置] 
+   * [在没有wifi的情况下使用Mycroft] 
+   * [API密钥服务] 
+   * [在代理服务器后面使用Mycroft] 
+     + [在没有身份验证的情况下在代理后面使用Mycroft] 
+     + [在经过身份验证的代理后面使用Mycroft] 
+-[参与进来] 
+-[链接] 
 
 # 入门
 
